@@ -1,0 +1,83 @@
+1. Attribute:
+<a href="" title="" target="">
+title: the title attribute specifies extra information about the link, such as what page is that you are linking to. For example, title = "The Mozilla homepage". This will appear as a tooltip when hovered over. 
+
+target: for example, taget="_blank" will display the link in a new tab. If you want to display the link in the current tab just omit this attribute. 
+
+2. Boolean attributes
+
+<input type="text" disabled> / <input type="text" disabled="disabled">
+
+boolean values can stand without values assigned
+
+3. 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+  </body>
+</html>
+
+<!DOCTYPE html>: is the shortest string of characters that counts as a valid doctype; that is all you really need to know. 
+
+<html></html>: root element
+
+<head></head>: acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers.
+
+<meta charset = "utf-8">: specify the character set your document should use is "UTF-8";
+
+<title></title>: title of the page; visible when loading
+
+<body></body>: contains all the content that you want to show to web users when they visit your page.
+
+<h1>-<h6>: 6 levels; with h1 assigned the most important and h2 assigned the least important
+
+<strong></strong>: has to be meaningful instead of being bold
+<em></em>: emphasis instead of <i></i>
+
+
+4. 
+2 types of list
+1 - unordered
+2 - ordered
+
+5. <div> - a generic container for flow content. It has no effect on the content or layout until styled using CSS.
+
+e.g.
+
+<div>
+  <p>Any kind of content here. Such as
+  &lt;p&gt;, &lt;table&gt;. You name it!</p>
+</div>
+
+styled example:
+
+HTML:
+
+<div class="shadowbox">
+  <p>Here's a very interesting note displayed in a
+  lovely shadowed box.</p>
+</div>
+
+CSS:
+
+.shadowbox {
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+Note: the use of the class attribute on the <div> to apply the style named "shadowbox" to the element.
+
+
+5. <span></span> - inline elements
+
+6. attributes
+
+format: <tag name="value"></tag>
+
