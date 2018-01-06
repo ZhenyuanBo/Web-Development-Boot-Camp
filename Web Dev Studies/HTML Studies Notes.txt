@@ -81,3 +81,25 @@ Note: the use of the class attribute on the <div> to apply the style named "shad
 
 format: <tag name="value"></tag>
 
+7. Images
+
+<img src="corgi.png">
+
+8. HTML Table
+
+9. HTML Forms
+- <form></form>, <input></input>, <label></label>
+- write simple validations
+
+<form action="" method=""></form>
+action - the URL to send form data to
+method - the type of HTTP request
+
+<input type="text">
+<input type="date">
+<input type="color">
+
+10. Labels
+<label for=""></label>
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample Form</title>
+</head>
+<body>
+	<h1>Login Page</h1>
+	<!-- form is a container that contains multiple inputs -->
+	<!-- placeholder gives a hint to user what data is expected -->
+	<!-- action - where the form sends the data to; default: the current location-->
+	<!-- method - what HTTP method is; default: 'get'-->
+	<form action="http://wikipedia.org">
+		<!-- for & id should match -->
+		<label for="username">Username:</label>
+		<input id="username" type="text" placeholder="username" required>
+		<label for="password">Password:</label>
+		<input id="password" type="password" placeholder="password" required>
+		<!-- <button>Submit</button> -->
+		<input type="submit">
+	</form>
+	<!-- validation: 1.check if the field is not empty 2.check if the data format is correct -->
+	<form action="http://wikipedia.org">
+		<!-- for & id should match -->
+		<label for="Email">Email:</label>
+		<input id="Email" type="email" placeholder="email" required>
+		<label for="password">Password:</label>
+		<input id="password" type="password" placeholder="password" required>
+		<!-- <button>Submit</button> -->
+		<button>Login</button>
+	</form>
+
+</body>
+</html>

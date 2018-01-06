@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inputs Demo</title>
+</head>
+<body>
+
+	<p>Do you prefer cats or dogs?</p>
+
+	<form>
+		<!-- by having the same name, these two inputs are connected
+		users can only pick one of them
+		URL:"...?petChoice=DOGS
+		-->
+		<label for="dogs">Dogs: </label>
+		<input name="petChoice" id="dogs" type="radio" value="DOGS">
+
+		<label for="cats">Cats: </label>
+		<input name="petChoice" id="cats" type="radio" value="CATS">
+		<!-- <input type="checkbox"> -->
+
+		<p>What is your favourite color?</p>
+		<!-- DROP DOWN MENU -->
+		<select name="color">
+			<option>Red</option>
+			<option>Orange</option>
+			<option>Yellow</option>
+		</select>
+
+		<p>What is your current mood?</p>
+		<!-- value used here is to indicate what the input value is as :) is not readable -->
+		<select name="mood">
+			<option value="HAPPY">:)</option>
+			<option value="Emotionless">:|</option>
+			<option value="SAD">:(</option>
+		</select>
+
+		<!-- text area: contain multi-line -->
+		<textarea name="paragraph" rows="10" cols="50">
+
+		</textarea>
+		<button>Go!</button>
+	</form>
+
+</body>
+</html>
