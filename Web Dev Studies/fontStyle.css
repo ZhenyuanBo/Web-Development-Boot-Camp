@@ -1,0 +1,51 @@
+font-family*/
+p {
+	font-family: "Arial";
+}
+
+h1 {
+	font-family: Georgia;
+}
+
+/*font-size*/
+body{
+	font-size: 10px;
+}
+h1{
+	font-size: 5.0em;
+}
+p{
+	font-size: 2.0em;
+}
+span {
+	/*it checks the font-size of the parent element; and dynamically changes*/
+	font-size: 2.0em;
+}
+
+/*font-weight - indicates how thick the lines are*/
+p{
+	font-weight: bold;
+	/*font-weight:normal*/
+	/*certain font can use numeric value to define the weight*/
+	/*
+	font-weight: 1;
+
+
+	*/
+}
+
+
+/*line-height*/
+p{
+	line-height: 2;
+	/*this checks the spacing between each line*/
+}
+/*text-align*/
+h1 {
+	text-align: center;
+}
+
+/*text-decoration*/
+p{
+	text-decoration: underline;
+}
