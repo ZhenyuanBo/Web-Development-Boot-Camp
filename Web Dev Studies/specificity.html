@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Specificity</title>
+	<style type="text/css">
+/*		ul{
+			although we style ul, as li is a child of ul; it inherited the color from ul
+			color:purple;
+		}*/
+		/*
+		if we set the property on the parent, it can also affect the child element
+		*/
+		body{
+			color: red;
+		}
+
+		p{
+			color: green;
+		}
+
+		ul{
+			color:blue;
+		}
+
+		li{
+			color: orange;
+		}
+
+		.highlight{
+			color: yellow;
+		}
+
+		#special{
+			color: pink;
+		}
+		/*
+			specify a property for a particular element - specificty
+			multiple styles targeting one element;
+			CSS has to decide which one wins, the one that is the most specific
+			wins
+		*/
+	</style>
+</head>
+<body>
+
+	<p>Hello!!!</p>
+	<ul>
+		<li id="special" class="highlight">John</li>
+		<li>Paul</li>
+		<li>George</li>
+		<li class="highlight">Ringo</li>
+	</ul>
+
+</body>
+</html>
