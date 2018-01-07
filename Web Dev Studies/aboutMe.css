@@ -1,0 +1,31 @@
+h1{
+	color: green;
+	/*easier than #000000*/
+/*	border-color: purple;
+	border-width: 5px;
+	border-style: solid;*/
+
+	border: 2px green dashed;
+}
+
+li{
+	color: green;
+}
+
+h4{
+	color: purple;
+	background: rgb(255,100,80);
+
+}
+
+body{
+	/*background: url(https://media.freestocktextures.com/cache/4d/e6/4de6261b970deb804e557b9bb1dd44ad.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background: pink;
+}
+
+/*
+border: 1. width, 2. style 3. color
+
+*/
