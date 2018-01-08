@@ -1,0 +1,163 @@
+1. CSS: Cascading Style Sheets
+2. General Rule
+selector{
+	property: value;
+	anotherProperty: value;
+}
+3. example:
+
+h1{
+	color: purple;
+	font-size: 56px;
+}
+
+img{
+	border-color: red;
+	border-width: 3px;
+}
+
+3. Color system in Hexadecimal
+
+# + String of 6 hexadecimal numbers (from 0 - F)
+
+h1{
+	color: #000000;
+}
+
+h2{
+	color: #4B0082;
+}
+
+h3{
+	color: #FF1493;
+}
+
+#_ _ _ _ _ _
+first 2: how much red
+second 2: how much green
+last 2: how much blue
+
+
+h1{
+	color: #FF0000;
+}
+
+h2{
+	color: #FF8000;
+}
+
+
+RGB Definition
+
+h1{
+	color: rgb(0,255,0);
+}
+
+h2{
+	color: rgb(100,0,100);
+}
+
+h3{
+	color: rgb(11,99,150);
+}
+
+RGBA: make color transparent
+
+h1{
+	color: rgba(11,99,150, 1);
+	//4th channel ranges from 0-1; 1-no transparency; a - alpha; strength of transparency
+}
+
+
+body{
+	background: #95a5a6
+}
+
+body{
+	background: url(); 
+	/* where the image is located - location put in url() */
+}
+
+
+4. CSS selectors
+
+to single something out, we need 'id' as an attribute for an element; can only be one time on the page; has to be unique
+
+different types of selectors:
+1). element selector
+
+li{
+	background:red;
+}
+
+2). class selector
+
+.completed{
+	
+}
+
+3). id selector
+
+#hello{
+	
+}
+
+4). star selector
+select everything on the page
+* {
+	border: 1px solid lightgrey;
+}
+
+5). descedent selector
+
+if we want to style the <a> element under <li> instead of the one under <h1>
+
+we do:
+
+li a {
+	
+}
+
+6). adjacent selector
+
+h4 + ul (ul that is right after h4; without + it will be ul inside h4)
+
+h4 + ul {
+	border: 4px solid red;
+}
+
+7). attribute selector
+
+a[href="http://www.goole.com"]{
+	background:blue;
+}
+
+input[type="text"]{
+	background: gree;
+}
+
+8). nth of type
+
+every 2nd of div; paragraph...
+
+
+ul:nth-of-type(3){
+	background: purple;
+}
+
+nth-of-type(3): 3rd ul;
+
+5. inheritance
+
+
+6. text-related properties
+
+7. Box Model:
+- Content
+- Padding
+- border
+- margin
+
+margin: between the border and anything else
+padding: between the border and the content inside
+
