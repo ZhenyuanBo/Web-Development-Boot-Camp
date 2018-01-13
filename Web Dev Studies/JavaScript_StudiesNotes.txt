@@ -1,0 +1,179 @@
+1. Chrome JavaScript Developer Tool
+2. Primitives
+	5 primitive data types:
+	1. Numbers: 4, 9.3 -10
+	2. Strings: "hello world"
+	3. booleans
+	4. null and undefined (values)
+3. Variables
+
+var yourVariableName = yourName;
+javaScript variable should be camel case
+
+4. Userful built-in methods
+1). allert - pop up a message to the user
+alert("Hello there!")
+console.log("hello from the console!")
+prompt("what is your name?")
+
+5. comparison operator
+
+== vs. ===
+
+==: JS perform type coercion
+
+===: JS does not perform type coercion; not only it compares the type, but also compares the value
+
+logical operator:
+&& - AND
+|| - OR
+! - NOT
+
+6. Conditionals
+
+if ... else if ... else ...
+
+7. higher order functions
+
+function sing(){
+	....
+}
+
+setInterval(sing, 1000);
+
+if we don't define the function previously, we can use anonymous function instead;
+
+setInterval(function(){...}, 1000);
+
+8. Array
+
+var friends = ["charlie","liz", "David", "Mattias"];\
+
+creating an array:
+
+var array_name = [item1, item2, item3,...];
+
+//arrays can hold any type of data
+var random_collection = [49, true, "Hermione", null];
+
+//arrays have a length property
+var nums = [45, 37, 89, 24];
+
+nums.length;
+
+2-d array
+
+var friendGroups = [["Harry","Ron", "Hermione"],["Malfoy"."Crabbe", "Goyle"],["Mooney","Wormtail","Prongs"]];
+
+ForEach - "built-in" function
+
+var colors = ["red", "orange", "yellow", "green"];
+
+colors.forEach(function(oclor){console.log(color)});
+
+// color is a placeholder
+
+var numbers = [1,2,3,4,5,6,7,8,9,10];
+
+numbers.forEach(function(color){
+	if(color % 3 === 0){
+		console.log(color);
+	}
+})
+
+.forEach takes a callback function, that callback function is expected to have at least 1, but up to 3 arguments. This is how .forEach was designed.
+
+The arguments are in a specific order:
+- The first one represents each element in the array (per loop iteration) that .forEach was called on.
+- The second represents the index of said element.
+- The third represents the array that .forEach was called on (it will be the same for every iteration of the loop).
+
+You have a couple options when calling .forEach on an array:
+
+You can pass in an anonymous function:
+
+    [1,2,3].forEach(function(el, i, arr) {
+      console.log(el, i, arr);
+    });
+
+Or you can pass in a pre-written, named function.
+
+    function logNums(el, i, arr) {
+      console.log(el, i, arr);
+    }
+     
+    [1,2,3].forEach(logNums);
+
+Notice how in the second example we don't invoke logNums when passing it into .forEach? We simply pass in the function name. We don't need to invoke the logNums function, .forEach does that for us. In fact, it invokes the function multiple times, once for every element inside of the array.
+
+
+JavaScript Object
+
+var person={
+	name: "Cindy",
+	age: 32,
+	city: "Missoula"
+};
+
+retrieve data from the object:
+
+1. person["name"]
+
+2. person.name [cannot use dot notation if the property starts with a number / e.g. 1blah; or if there is a space
+in the proprty, don't use .]
+
+we can also create an empty object and assign the value to the properties
+
+var person = {}
+
+person.name = "Cindy";
+person.age = 32;
+person.city = "TOkyo";
+
+or:
+
+var person = new Object();
+
+JS Methods
+methods: function is just a property within an object
+
+var obj = {
+	name: "chuck",
+	age: 45,
+	isCool: false,
+	friends: ["bob", "tina"],
+	add: function(x,y){
+		return x+y;
+	}
+}
+}
+
+the reason that we have methods defined in the object is that it can make codes more logically together
+
+var dogSpace = {};
+dogSpace.speak = function(){
+	return "WOOF";
+}
+
+var catSpace = {};
+catSpace.speak = function(){
+	return "MEOW";
+}
+
+1. methods can prevent namespace collisions;
+
+
+Underscore.js
+
+var comments={};
+
+comments.data = ["Bo", "Zhenyuan", "ZYBo"];
+
+comments.print = function(){
+	this.data.forEach(function(el){
+		console.log(el);
+	});
+};
+
+
+
