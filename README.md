@@ -1,2 +1,2 @@
 # Web-Development-Boot-Camp
-Repositories for coding assignments
+This is a repository for web-dev bootcamp course offered on Udemy.
