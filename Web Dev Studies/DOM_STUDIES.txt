@@ -1,0 +1,156 @@
+1. DOM - Document Object Model
+
+Dom: is the interface between your Javascript and HTML+CSS
+
+1). Select 2). Manipulate
+
+<h1>Hello World!</h1>
+
+var h1 = document.querySelector("h1");
+
+h1.style.color = "pink";
+
+var body = document.querySelector("body");
+
+var isBlue = false;
+
+setInterval(function(){
+	if(isBlue){
+		body.style.background = "white";
+	}else{
+		body.style.background = "#3498db";
+	}
+	isBlue = !isBlue;
+}, 1000); //every 1000s, we call function - setInterval
+
+document.URL, document.head;
+
+5 main methods - built in document
+
+1). document.getElementById();
+2). document.getElementsByClassName();
+3). document.getElementsByTagName();
+4). document.querySelector();
+5). document.querySelectorAll();
+
+querySelecto: returns the first element that matches a given CSS-style selector
+
+var tag = document.querySelector("#highlight"); // this is equivalent to getElementById("highlight")
+
+<h1>Hello</h1>
+<h1>GOodbye</h1>
+
+var tag = document.querySelector("h1"); --> only returns the first h1 value (Hello)
+
+querySelectorAll -- return all matching elements
+
+The style property is one way to manipulate an element's style
+
+var tag = document.getElementById("highlight");
+
+//manipulate
+tag.style.color = "blue";
+tag.style.border = "10px solid red";
+tag.style.fontSize = "70px";
+tag.style.background - "yellow";
+tag.style.marginTop = "200px";
+
+rather than directly manipulating style with JS, we can define a CSS class and then toggle it on or off
+with JS
+
+.some-class{
+	color: blue;
+	border: 10px solid red;
+}
+
+var tag = document.getElementById("highlight");
+tag.classList.add("some-class");
+
+classList (a read-only list that contains the classes for a given element):
+
+var tag = document.querySelecto("h1");
+
+//add:
+tag.classList.add("some-class"); -- turn it on
+
+//remove:
+tag.classList.remove("some-class"); -- remove
+
+//toggle a class
+tag.classList.toggle("some-class"); --if the element already has this class, remove it; if not, add it / turn it on
+
+classList is not a list; we need to use ".add" instead of ".push" to add a new element
+
+textContent: returns a string of all the text contained in a given element
+
+<p>
+		This is an <strong> awesome </strong> paragraph
+</p>
+
+var tag = document.querySelector("p");
+
+tag.textContent;
+
+tag.textContent = "blah blah blah blah";
+
+innerHTML
+
+<p>Corgi mixes are <strong> very </strong> adorable</p>
+
+var p = document.querySelector("p");
+
+p.textContent === Corgi mixes are very adorable;
+
+p.innerHTML === Corgi mixes are <strong> very </strong> adorable
+
+document.querySelector("body").innerHTML = "<h2>zhzhz</h2>"; -- <h2> tag will take effect
+
+Manipulating Attributes: getAttribute() and setAttribute() to read and write attributes like src or href
+
+<a href = "www.google.com"> I am a link </a>
+<img src="logo.png">
+
+var link = document.querySelector("a");
+link.getAttribute("href");
+link.setAttribute("href", "www.dogs.com");
+
+DOM Events:
+
+ - clicking on a button
+ - hover over a link
+ - drag and drop
+ - press the enter key
+
+we select an element and then add an event listener
+
+to add a listener, we use a method called addEventListener
+
+syntax: element.addEventListener(type, functionToCall);
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() { console.log("SOMEONE CLICKED THE BUTTON")});
+//the function will execute whenever the button clicks
+
+var button = document.querySelector("button");
+var paragraph = document.querySelector("p");
+
+button.addEventListener("click", function() {
+	paragraph.textContent = "Someone clicked the button!";
+});
+
+we don't need to use anonymous function all the time, we can do this instead:
+
+button.addEventListener("click", paragraphChange);
+function paragraphChange(){
+	paragraph.textContent = "Someone clicked the button!";
+}
+
+get the value from the input:
+
+<input type="number">
+
+input.value
+
+MDN Event Reference
+
+1. mouseover, mouseout
