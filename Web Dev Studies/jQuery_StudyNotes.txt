@@ -1,0 +1,163 @@
+1. Select elements with $()
+2. Use .css() to style elements; object can be defined within the css()
+example: 
+css({
+	
+})
+
+$() selecting with jquery is very similar to querySelectorAll, in that we provide a css style
+selector and jQuery will return all matching elements
+
+
+$("img")
+
+$(".sale")
+
+$("#bonus")
+
+$() == document.querySelectorAll("");
+
+
+Methods:
+
+1. text() -- example: $("h1").text();/ similar to tag.textContent in DOM
+we can overwrite the text by doing this: $("h1").text("new text!!!");
+
+2. html() -- example:
+
+	<li>H</li>
+	<li>F</li>
+</ul>
+
+$("ul").html() -- returns "<li>H</li> <li>F</li>"
+
+this is the same as: document.querySelector("ul").innerHTML
+
+overwrite: $("ul").html("<li>i hacked your system</li> <li>I hacked your system</li>")
+
+attr()
+
+$("img").attr("src");
+
+$("input").attr("type")
+
+$("input").attr("type", "color")
+
+<img src="">
+<img src="">
+<img src="">
+
+$("img:first-of-type").attr()
+$("img").last().attr()
+
+getter: $("input").attr("type") -- returns the type of this input; could be: "color", "checkbox"
+setter: $("input").attr("type", "checkbox") -- set the type of this input to checkbox
+
+val()
+
+$("input").val() -- getter
+$("input").val("zybo") -- setter
+
+var inputTag = document.querySelector("input");
+var inputTagValue = inputTag.value;
+
+delete your input value
+
+$("input").val("");
+
+class manipulation:
+
+1. addClass()
+2. removeClass()
+3. toggleClass()
+
+toggleClass() -- class will be added if the element doesn't have that class previously; will be deleted if the element 
+did have that class previously
+
+$().first() == $("h1:first-of-type") == $("h1:first")
+
+jQuery Events
+
+1. click()
+2, keypress()
+3. on()
+
+click()
+
+$('#submit').click(function(){
+	console.log('Another click');
+})
+
+$('button').click(function(){
+	alert("some one clicked the button!");
+})
+
+this in vanilla js is == $()
+
+keyPress() - a quick and easy way to add a keypress listener to elements
+
+$('input[type="text"]').keypress(function(){
+	alert("text iput keypress!");
+})
+keyDown(), keyUp()
+
+we can restrict when keypress() will be fired (i.e. we can set which key will trigger this keypress() to take place); each key has a code associated with it (char code)
+
+The following is the link where char code can be checked:
+
+https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
+
+To restrict that, we do this:
+
+$("input").keypress(function(event){
+	if(event.which == 13){
+		console.log("you typed enter!!!");
+	}
+}
+
+.on() -- works similarly to the addEventListener, it specifies what type of event to listen for.
+$("h1").on("click", function(){
+	$("h1").css("color", "purple");
+	//$(this).css("color", "purple");
+});
+
+$("input").on("keypress", function(){
+	console.log("Key Pressed!");
+})
+
+
+$("button").on("mouseenter", function(){
+	$(this).css("font-weight", "bold");
+})
+
+$("button").on("mouseleave", function(){
+	$(this).css("font-weight", "normal");
+})
+
+click() vs. on("click")
+
+- click() only adds listeners for existing elements
+- on() will add listeners for all potential future elements
+- this will all make sense in the next video
+
+Jquery Effects
+
+.fadeOut() -- fade out only makes element hidden (display == "none")
+to completely remove it from the DOM, we should do this:
+$().remove();
+
+to do something white the object of interest fades out, we can do this:
+.fadeOut("slow", function(){
+	//this call back function executes when the element fades out
+})
+
+.fadeIn("slow", function(){
+	//this call back function executes when the element fades in
+})
+
+.fadeToggle("slow", function(){
+	
+}
+
+.slideDown(), .slideUp(), .slideToggle()
+//the height will change, fade in and fade out
