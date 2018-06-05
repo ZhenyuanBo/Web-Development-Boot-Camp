@@ -1,0 +1,10 @@
+<h1>Results Found!</h1>
+<ul>
+    <% bodyData["Search"].forEach(function(movie){ %>
+        <li>
+            <%= movie["Title"] %>- <strong><%= movie["Year"] %></strong>
+        </li>
+    <%}) %>
+</ul>
+
+<a href="/">Search Again</a>

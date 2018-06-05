@@ -1,0 +1,24 @@
+mongo db common commands:
+
+1. mongod
+2. mongo
+3. help
+4. show dbs
+5. use
+6. insert
+7. find
+8. update
+9. remove
+
+* create a new database and use it / use an existing database
+use
+
+* db.dogs.insert({name:"Rusty", breed:"Mutt"});
+
+* dogs - collections
+
+* use demo - switch to db demo
+
+* show collections - display all the collections
+
+* mongoose
